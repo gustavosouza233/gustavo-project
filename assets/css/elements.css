@@ -1,0 +1,96 @@
+/* .rubik-scribble-regular {
+  font-family: "  ;
+  font-weight: 400;
+  font-style: normal;
+} */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  color: var(--primary-color);
+  line-height: 1.5;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+h1 {
+  font-size: 6rem;
+  text-transform: uppercase;
+}
+h2 {
+  /* parte 4 */
+  font-size: 6rem;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+h3 {
+  font-size: 5rem;
+}
+h4 {
+  font-size: 4.5rem;
+}
+h5 {
+  font-size: 4rem;
+}
+h6 {
+  font-size: 3.5rem;
+}
+
+/* parte 2 */
+a {
+  /* tirar as linhas dos links... */
+  text-decoration: none;
+}
+
+/* parte 4 */
+p{
+  margin-bottom: 3rem;
+}
+
+.responsive-table {
+  overflow: hidden;
+/* - controla se o conteúdo de um elemento exceder as dimensões de sua caixa. Neste caso, definir overflow como hidden
+inicialmente esconde qualquer conteúdo que exceda a área delimitada do elemento. */
+  overflow-x: auto;
+  /* barra de rolagem horizontal. no caso coloca mais conteudo para exceder pra poder manipular a barra ou mover... */
+}
+table {
+  min-width: 360px;
+  /* largura minima da tabela padrao */
+  width: 100%;
+  /* permite que a tabela se ajuste dinamicamente ao espaço disponível, tornando-a responsiva e capaz de se adaptar 
+  a diferentes larguras de tela */
+  border-collapse: collapse;
+  /* maneira como as bordas das células da tabela são exibidas. */
+}
+table caption {
+  font-style: italic;
+  font-size: 1.6rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+table td, table th {
+  white-space: nowrap;
+  /* impede que o conteúdo dentro das células da tabela quebre em várias linhas. */
+  padding: 1rem;
+  /* espaçamento interno de todas as células da tabela em todas as direções (topo, direita, baixo, esquerda)  */
+  text-align: left;
+  /* alinha o texto dentro das células à esquerda */
+  border: 0.1rem solid var(--light-gray-color)
+  /* Define uma borda sólida em torno de cada célula da tabela com uma espessura  */
+}
+
+tfoot td, table th {
+  background: var(--light-gray-color);
+  /* define a cor de fundo dos elementos especificados no caso cor de fundo no cabeçalhos e rodapé da tabela */
+}

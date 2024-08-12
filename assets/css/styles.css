@@ -1,0 +1,456 @@
+/* parte 3 */
+.intro-content {
+  position: relative;
+  top: -8rem;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--gap);
+  min-height: 100vh;
+  /* correção */
+}
+
+/* https://undraw.co/ */
+.intro-text-content,
+.intro-img {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.intro-text-content h2 {
+  font-size: 6rem;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+/* elements body line-height: 1.5; */
+
+.intro-img img,
+.intro-img svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* parte 4 */
+.top3-content {
+  max-width: 64rem;
+  display: flex;
+  /* correção */
+  /* flex-flow: column wrap; */
+  flex-direction: column;
+  flex-wrap: nowrap;
+  /* nao deixar a coluna se quebrar */
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* parte4  grid-one*/
+.grid-one-content {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  min-height: 100vh;
+  /* correção min-height*/
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+  counter-reset: grid-counter;
+}
+
+.grid h3 {
+  font-size: 3rem;
+  position: relative;
+  padding-left: 5rem;
+  padding-bottom: 2rem;
+}
+
+.grid h3::before {
+  counter-increment: grid-counter;
+  content: counter(grid-counter);
+  position: absolute;
+  font-size: 8rem;
+  font-style: italic;
+  top: -4rem;
+  left: -1rem;
+  transform: rotate(5deg);
+}
+.grid-main-heading {
+  margin-bottom: 1rem;
+}
+.grid-description {
+  padding-bottom: 5rem;
+}
+.gallery-img {
+  width: 100%;
+  max-width: 36rem;
+  max-height: 36rem;
+  overflow: hidden;
+}
+.gallery-img img {
+  transition: all 300ms ease-in-out;
+}
+.gallery-img img:hover {
+  transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
+/* parte 4 */
+.contact-form{
+  grid-column: span 2;
+}
+
+.contact-form .form-grid{
+  border: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+
+.form-grid legend{
+  font-style: italic;
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+}
+.form-group{
+  flex: 1 1 320px;
+}
+.form-group label{
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.form-group input, .form-group textarea{
+  border: none;
+  background: var(--white-color);
+  padding: 1.5rem 2rem;
+  width: 100%;
+  /*  box-sizing: border-box; no elements *{} */
+}
+.form-group input:focus, .form-group textarea:focus{
+  box-shadow: 0px 0px 10px 2px var(--secondary-color);
+}
+.form-group button{
+  border: 0.5rem solid var(--white-color);
+  background: none;
+  color: var(--white-color);
+  padding: 1.5rem 2rem;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+.form-group button:hover{
+  background: var(--white-color);
+  color: var(--primary-color);
+}
+.form-group ::placeholder{
+  color: var(--light-gray-color);
+  /* se quiser coloca uma cor mais escura mas nao muito mais... */
+}
+.footer{
+  text-align: center;
+  font-size: 1.6rem;
+}
+.footer a{
+  color: var(--primary-color);
+}
+.span {
+  color: var(--secondary-color);
+}
+
+.footer p{
+  margin: 0;
+  padding: 1rem;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--white-color);
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--primary-color);
+  transform: rotate(-90deg);
+  border: 0.1rem solid var(--primary-color);
+}
+
+.close-menu {
+  display: none;
+}
+@media (max-width: 800px) {
+  .intro-content, .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%; 
+  }
+
+  .gallery-img img {
+    width: 100%;
+  }
+
+  .grid-one-content {
+    display: block;
+  }
+
+  .menu {
+    bottom: 0;
+    text-align: center;
+  }
+
+  .menu-content, .menu-content ul {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .menu-content {
+    height: 100vh;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .close-menu-label::after {
+    content: '☰';
+    position: fixed;
+    z-index: 2;
+    top: 2rem;
+    right: 2rem;
+    background: var(--primary-color);
+    color: var(--white-color);
+    font-size: 3rem;
+    line-height: 3rem;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+
+  .close-menu:checked~.menu {
+    display: block;
+  }
+
+  .close-menu:checked~.close-menu-label::after {
+    content: '×';
+  }
+  .menu-spacing {
+    display: none;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3.6rem;
+  }
+  h3 {
+    font-size: 3.4rem;
+  }
+  h4 {
+    font-size: 3.2rem;
+  }
+  h5 {
+    font-size: 3rem;
+  }
+  h6 {
+    font-size: 2.8rem;
+  }
+}
+
+.contact-bg {
+  background-color: #f9f9f9; /* Cor de fundo suave */
+  padding: 40px 20px;
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.intro-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-text-content h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+input[type="text"],
+textarea {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+legend {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+      grid-column: span 1;
+  }
+}
+input[type="text"],
+textarea {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #fff; /* Fundo branco */
+    background: #fff; /* Garantia de fundo branco */
+}
+
+textarea {
+    background-color: #fff !important; /* Força o fundo branco para textarea */
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #007bff; /* Cor da borda ao focar no campo */
+    outline: none; /* Remove o contorno padrão do navegador */
+}
+.form-group label {
+  color: #fff; /* Cor branca para os rótulos */
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+input[type="text"],
+textarea {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background-color: #fff; /* Fundo branco */
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #007bff; /* Cor da borda ao focar no campo */
+  outline: none; /* Remove o contorno padrão do navegador */
+}
+
+#intro {
+  width: 100%;
+  height: 100vh; /* Faz a seção ocupar a altura total da tela */
+  background-size: cover; /* Faz com que a imagem cubra toda a seção */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Cor do texto */
+  position: relative;
+}
+
+.intro-text-content {
+  text-align: center;
+  z-index: 1; /* Assegura que o texto fique acima da imagem */
+}
+
+#intro::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adiciona uma camada escura sobre a imagem para melhorar a legibilidade do texto */
+  z-index: 0; /* Faz a camada ficar atrás do texto */
+}
+/* Estilos para o modal */
+.modal {
+  display: none; /* Esconde o modal por padrão */
+  position: fixed;
+  z-index: 1000; /* Posiciona o modal acima do conteúdo */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9); /* Fundo semi-transparente */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Estilos para o modal */

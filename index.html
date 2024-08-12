@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com"> <!--  &gt;  mudar para -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/elements.css">
+  <link rel="stylesheet" href="assets/css/classes.css">
+  <link rel="stylesheet" href="assets/css/menu.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
+  <label class="close-menu-label" for="close-menu" title="close menu"></label>
+  <aside id="logo" class="menu white-bg">
+    <div class="main-content menu-content">
+      <h1><a href="#intro">red dead redemption 2</a></h1>
+      <nav>
+        <ul>
+          <li><a href="#intro">intro</a></li>
+          <li><a href="#top3">top 3</a></li>
+          <li><a href="#grid-one">grid-one</a></li>
+          <li><a href="#gallery">gallery</a></li>
+          <li><a href="#pricing">pricing</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+  <!-- Parte 3 -->
+ 
+  <section id="intro">
+    <div class="intro-text-content">
+      <h1></h1>
+    </div>
+  </section>
+  
+  <!-- parte 3 2.0 -->
+  <section id="top3" class="white-bg ">
+    <div class="main-content top3-content">
+      <h2>Jogabilidade</h2>
+      <p>
+  </section>
+  <!-- parte 4 -->
+  <section id="grid-one" class="grid-one main-bg ">
+    <div class="main-content grid-one-content">
+      <!-- div estava errada correção -->
+      <h2 class="grid-main-heading">atores</h2>
+      <p class="grid-description">Uma breve descrição.</p>
+      <div class="grid">
+        <article>
+          <h3>Rob Wiethoff</h3>
+          <p> é um ator e dublador estadunidense. Wiethoff é mais conhecido por ter dado voz e captura de movimentos ao personagem John Marston no jogo eletrônico Red Dead Redemption, sua expansão Undead Nightmare e sua sequência Red Dead Redemption 2</p>
+        </article>
+        <article>
+          <h3>Roger Clark</h3>
+          <p>
+            
+            é um ator norte-americano. Ele é mais conhecido por interpretar o personagem Arthur Morgan no jogo eletrônico Red Dead Redemption 2, lançado em 2018.
+          </p>
+        </article>
+        <article>
+          <h3>Benjamin Byron Davis</h3>
+          <p> é um ator, escritor, diretor e preparador de elenco americano. Ele é mais conhecido por interpretar o personagem Dutch van der Linde no jogo eletrônico Red Dead Redemption e sua sequência Red Dead Redemption 2. </p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- part 4.2 -->
+  <!-- source.unsplash.com/random/360x360 -->
+  <section id="gallery" class="grid-one main-bg">
+    <div class="main-content grid-one-content">
+      <h2 class="grid-main-heading">Gallery</h2>
+      <p class="grid-description">Imagem do jogo</p>
+      <div class="grid">
+        <img src="assets/img/fundo6.jpeg" alt="random" class="expandable-image">
+      </div>
+    </div>
+  </section>
+  
+  <!-- Modal para exibir a imagem expandida -->
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+  
+     
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- parte da tabela -->
+  <section id="pricing" class="white-bg section">
+    <div class="main-content top3-content">
+      <h2>historia</h2>
+      <p>A história se passa em 1899 em uma recriação fictícia do Velho Oeste americano, Red Dead Redemption 2 e acompanha a vida de Arthur Morgan e sua posição na notória gangue Van der Linde, que precisa lidar com seu declínio da gangue enquanto eles são perseguidos por agentes da lei, gangues rivais e agentes Pinkerton.</p>
+      <p>Desenvolvimento. Os trabalhos preliminares sobre Red Dead Redemption 2 começaram durante o desenvolvimento de Red Dead Redemption (2010), enquanto a produção principal ocorreu após o lançamento de seu antecessor, em maio de 2010.</p>
+      <div class="responsive-table">
+        <!-- tabela responsiva pra nos poder rolar nela -->
+        <!-- elements para configurar as tags -->
+        <table>
+          <caption>Pricing table</caption>
+          <thead>
+            <tr>
+              <th>Title 1</th>
+              <th>Title 2</th>
+              <th>Title 3</th>
+              <th>Title 4</th>
+              <th>Title 5</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>content 1</td>
+              <td>content 2</td>
+              <td>content 3</td>
+              <td>content 4</td>
+              <td>content 5</td>
+            </tr>
+            <tr>
+              <td>content 1</td>
+              <td>content 2</td>
+              <td>content 3</td>
+              <td>content 4</td>
+              <td>content 5</td>
+            </tr>
+            <tr>
+              <td>content 1</td>
+              <td>content 2</td>
+              <td>content 3</td>
+              <td>content 4</td>
+              <td>content 5</td>
+            </tr>
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Testando</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parte conteact! -->
+
+  <section id="contact" class="contact-bg ">
+    <div class="main-content intro-content">
+      <div class="intro-text-content">
+        <h1>nos envie uma menssagem</h1>
+        
+      </div>
+      <div class="intro-img">
+        <!-- <img src="assets/img/undraw_static_assets_rpm6.svg" alt="log de html js e css"> -->
+      </div>
+      <div class="contact-form">
+        <form id="form">
+        <fieldset class="form-grid">
+          <legend>Contact me</legend>
+
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" name="name" id="first-name" placeholder="Your first name">
+          </div>
+
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" name="last-name" id="last-name" placeholder="Your last name">
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="text" name="email" id="email" placeholder="Your e-mail">
+          </div>
+
+          <div class="form-group full-width">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" rows="10" placeholder="Your message"></textarea>
+          </div>
+
+          <div class="form-group full-width">
+            <button type="submit">Send message</button>
+          </div>
+        </fieldset>
+    </form>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function () {
+                emailjs.init("0Winw08_oXyjRGsKK");
+            })();
+        </script>
+        <script>
+            document.getElementById('form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                emailjs.sendForm('service_vsitr58', 'template_sbu29e1', this)
+                    .then(function () {
+                        alert('Email enviado com sucesso!');
+                    }, function (error) {
+                        alert('Erro ao enviar o email: ' + JSON.stringify(error));
+                    });
+            });
+        </script>
+    </div>
+  </section>
+
+  <footer id="f1-footer" style="background-color: #ffffff; color: #000000; padding: 10px; text-align: center; width: 100%;">
+    <p style="margin: 0;">&copy; 2024 F1 Legends</p>
+</footer>
+<script src="assets/js/script.js"></script>
+</body>
+
+</html>
